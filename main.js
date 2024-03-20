@@ -50,7 +50,9 @@ function arte() {
   
   
 }
-
-window.addEventListener('contextmenu', function (e) {
-        e.preventDefault();
-    }, false);
+function arte1() {
+  
+  window.location.href = "arte1.html"
+  
+  
+}
