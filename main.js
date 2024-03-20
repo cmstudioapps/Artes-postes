@@ -1,22 +1,46 @@
-//var estilo = document.createElement("style")
-//document.body.appendChild(estilo)
-var fundo = Math.floor(Math.random()*2)+1
+var opc = document.getElementById("opc")
 
-if (fundo < 2) {
+var selecionado = localStorage.getItem("selecionado")
+
+if (selecionado) {
   
-  estilo.innerHTML = `
-  body {
-  background-image: url('fundoA.png');
-  background-size: cover;
-  background-attachment: fixed;
-  }`
-} else {
-  estilo.innerHTML = `
-  body {
-  background-image: url('fundoB.png');
-  background-size: ;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  opc.value = selecionado
   
-  }`
+}
+
+opc.addEventListener("change", function() {
+    // Armazenando o valor selecionado no armazenamento local
+    localStorage.setItem("selecionado", opc.value);
+});
+
+
+window.addEventListener('DOMContentLoaded', function() {
+    var navs = document.querySelectorAll('nav');
+    var parent = navs[0].parentNode;
+
+    // Cria uma nova ordem aleatória para as tags nav
+    var indices = Array.from(Array(navs.length).keys());
+    shuffleArray(indices);
+
+    // Reorganiza as tags nav com base na ordem aleatória
+    indices.forEach(function(index) {
+        parent.appendChild(navs[index]);
+    });
+});
+
+function shuffleArray(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+}
+
+//publicar:
+
+function publicar() {
+  
+  window.location.href = "publicar.html"
+  
 }
