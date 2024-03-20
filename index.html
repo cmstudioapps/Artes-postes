@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="app.json">
 </head>
 <body>
   
@@ -18,7 +19,7 @@
     
     <h2>Artes postes</h2>
     
-    <button>Publicar</button>
+    <button onclick="publicar()">Publicar</button>
     
   </header>
   <dialog id="login">
@@ -33,10 +34,10 @@
   <button type="submit" onclick="ok()">Continuar</button>
   </form>
   </dialog>
-  <select>
+  <select id="opc">
     
-    <option value="+18">Exibir artes para maiores de 18</option>
-    <option value="-18">Exibir Artes para menores</option>
+    <option id="opc1" value="+18">Exibir artes para maiores de 18</option>
+    <option id="opc2" value="-18">Exibir Artes para menores</option>
     
     
     
@@ -44,18 +45,31 @@
   
   <section>
     
-    <div id="post1">
+    <nav id="post1">
+      <h3>Usuário não indetificado:</h3>
+      <img src="Harry_Potter_fanart_-_Cor-Sa.jpg" alt="" height="170px">
       
-    </div>
+      <nav name ="Descrição">
+        
+      </nav>
+    
+    </nav>
     
     
-    <div id="post2">
+    <nav id="post2">
       
-    </div>
+      
+      <nav name="Descrição">
+        
+      </nav>
+    </nav>
     
     
   </section>
-  <div id="disqus_thread"></div>
+  <h2 id="avs">Faça comentários públicos</h2>
+  <div id="disqus_thread">
+    
+  </div>
 <script>
     /**
     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
