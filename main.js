@@ -56,3 +56,9 @@ function arte1() {
   
   
 }
+function arte2() {
+  
+  window.location.href = "arte2.html"
+  
+  
+}
