@@ -44,3 +44,7 @@ function publicar() {
   window.location.href = "publicar.html"
   
 }
+
+window.addEventListener('contextmenu', function (e) {
+        e.preventDefault();
+    }, false);
