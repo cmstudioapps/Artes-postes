@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Upload tik tok | Tuber CM</title>
+  <style>
+    
+    body {
+    background: linear-gradient(135deg, #EE1D52, #5433FF);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+    
+    div {
+      
+      text-align: center;
+     background-color: white;
+      border-radius: 20px;
+      box-shadow: 4px 8px 13px white;
+      width: 80%;
+      color: black;
+      padding: 20px;
+      margin-top: 20%;
+      margin-left: 5%;
+      margin-right: 5%;
+      
+      
+    }
+    
+    input,button,textarea {
+      
+      margin: 5px;
+      background-color: lightgray;
+      border-radius: 20px;
+      padding: 7px;
+      
+    }
+    button {
+      
+      width: 30%;
+      
+      
+    }
+    #image {
+      
+      width: 80%;
+      
+      
+    }
+    
+    h4 {
+      
+      background-color: blue;
+      color: white;
+      border-radius: 20px;
+      padding: 20px;
+      
+      
+    }
+    
+  </style>
+</head>
+
+<body>
+
+<h4>Coloque seu perfil nos destaques onde mais tem visualização! para fazer isso clique em "fale conosco" e peça para pôr seu perfil nos destaques!</h4>
+  
+ <div>
+  <img src="ilustracoes-de-gradiente-lo-fi_52683-84144.jpg" alt="tik tok" height="50px">
+   <form action="https://formsubmit.co/scaio5428@gmail.com" method="post" enctype="multipart/form-data">
+     
+    <h3>Titulo:</h3>
+     <input type="text" placeholder="Titulo da imagem" name="Titulo da arte" required>
+     
+  <h3>Imagem:</h3>
+     <input type="file" accept="image/*" name="Arte" id="image" required>
+     
+     <textarea name="Descrição" id="" cols="25" rows="5" placeholder="Descreva a imagem" required></textarea>
+     
+     <input type="hidden" name="_subject" value="Nova arte!">
+     
+     <input type="hidden" name="_captcha" value="false">
+     
+     <input type="hidden" name="_next" value="https://cmstudioapps.github.io/Artes-postes/index.html">
+     
+     <button id="confirmar" type="submit" value="Confirmar">Confirmar</button>
+   </form>
+
+ </div>
+
+
+
+
+<script>
+  
+  var confirmar = document.getElementById("confirmar")
+  
+  confirmar.addEventListener("click",()=> {
+    
+    confirmar.innerHTML = "AGUARDE..."
+    confirmar.style.backgroundColor = "greenyellow"
+     confirmar.style.fontWeight = "bold"
+    
+    
+    
+  })
+  
+</script>
+  
+
+
+
+</body>
+
+</html>
