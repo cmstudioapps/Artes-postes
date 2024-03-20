@@ -21,7 +21,18 @@
     <button>Publicar</button>
     
   </header>
+  <dialog id="login">
+  <form>
+  <h3>Preencha os campos abaixo:</h3>
   
+  <h4>Nome:</h4>
+  <input id="nome" type="text" name="Nome" placeholder="Digite aqui seu nome..." required>
+  <h4>Seu e-mail:</h4>
+  <input id="email" type="email" placeholder="Digite seu e-mail..." required>
+  
+  <button type="submit" onclick="ok()">Continuar</button>
+  </form>
+  </dialog>
   <select>
     
     <option value="+18">Exibir artes para maiores de 18</option>
@@ -64,5 +75,6 @@
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
   <script src="main.js">main.js</script>
+  <script src="login.js">login.js</script>
 </body>
 </html>
