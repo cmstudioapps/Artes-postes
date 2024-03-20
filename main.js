@@ -44,6 +44,12 @@ function publicar() {
   window.location.href = "publicar.html"
   
 }
+function arte() {
+  
+  window.location.href = "arte.html"
+  
+  
+}
 
 window.addEventListener('contextmenu', function (e) {
         e.preventDefault();
