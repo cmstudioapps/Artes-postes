@@ -35,12 +35,17 @@ button {
   padding: 10px;
   font-weight: bold;
   margin: 10px;
+  border: none;
   
   
 }
 
 
-
+#avs {
+  
+  margin-top: 20%;
+  
+}
 
 #disqus_thread {
   
@@ -48,6 +53,27 @@ button {
   
   padding: 10px;
   border-radius: 20px;
-  margin-top: 20%;
+  
+  
+}
+
+#login button {
+  
+  background-color: green;
+  color: white;
+  
+}
+
+nav {
+  background-color: lightgray;
+  overflow-y: auto;
+  padding: 5px;
+  
+}
+nav img {
+  
+  height: 170px;
+  border-radius: 10px;
+  margin: 0;
   
 }
