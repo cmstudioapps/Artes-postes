@@ -12,6 +12,12 @@ body {
   font-weight: 400;
   font-style: normal;
 }
+
+#eventos img {
+  
+  height: 200px;
+  
+}
 header img {
   
   height: 300px;
@@ -42,10 +48,6 @@ button {
 
 
 #avs {
-background-color: white;
-color: black;
-padding: 10px;
-border-radius: 10px;
   
   margin-top: 20%;
   
