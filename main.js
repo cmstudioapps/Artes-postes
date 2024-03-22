@@ -70,6 +70,13 @@ function arte3() {
   
 }
 
+function arte4() {
+  
+  window.location.href = "arte4.html"
+  
+  
+}
+
 window.addEventListener('contextmenu', function (e) {
         e.preventDefault();
     }, false);
