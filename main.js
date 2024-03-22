@@ -63,6 +63,12 @@ function arte2() {
   
 }
 
+function arte3() {
+  
+  window.location.href = "arte3.html"
+  
+  
+}
 
 window.addEventListener('contextmenu', function (e) {
         e.preventDefault();
