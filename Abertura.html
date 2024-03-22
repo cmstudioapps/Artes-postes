@@ -19,10 +19,11 @@ background-color: black;
 </style>
 </head>
 <body>
-<video id="fullscreen-video" src="b4b72878b7ff4aae9ce35fcd7d4e309b.mp4" autoplay loop controls></video>
+<video id="video" src="b4b72878b7ff4aae9ce35fcd7d4e309b.mp4" autoplay loop controls></video>
+
 
 <script>
-    const video = document.getElementById('fullscreen-video');
+    const video = document.querySelector('video');
 
     // Redirecionar para index.html quando o vídeo acabar
     video.addEventListener('ended', function() {
@@ -30,7 +31,6 @@ background-color: black;
     });
 
     // Impedir que o usuário avance ou baixe o vídeo
-    video.controls = false;
     video.addEventListener('contextmenu', function(e) {
         e.preventDefault();
     });
