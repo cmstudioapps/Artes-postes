@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vídeo em Tela Cheia</title>
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+    video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+</style>
+</head>
+<body>
+<video id="fullscreen-video" src="seu_video.mp4" autoplay loop></video>
+
+<script>
+    const video = document.getElementById('fullscreen-video');
+
+    // Redirecionar para index.html quando o vídeo acabar
+    video.addEventListener('ended', function() {
+        window.location.href = 'index.html';
+    });
+
+    // Impedir que o usuário avance ou baixe o vídeo
+    video.controls = false;
+    video.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
+</script>
+</body>
+</html>
