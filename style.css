@@ -16,7 +16,12 @@ body {
  #imgEvento {
   
   height: 200px;
+
   
+}
+#eventos {
+display: none;
+
 }
 header img {
   
