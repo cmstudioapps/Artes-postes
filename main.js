@@ -77,6 +77,13 @@ function arte4() {
   
 }
 
+function arte5() {
+  
+  window.location.href = "arte5.html"
+  
+  
+}
+
 window.addEventListener('contextmenu', function (e) {
         e.preventDefault();
     }, false);
