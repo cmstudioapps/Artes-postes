@@ -18,14 +18,13 @@
     <img src="ilustracoes-de-gradiente-lo-fi_52683-84144.jpg" alt="">
 
     <span id="eventos">
-      <h2>Eventos:</h2>
-      <a href="evento.html"><img src="https://i.imgur.com/OUh8zRf.jpeg" alt="" id="imgEvento"></a>
+      
       
     </span>
 
     <h2>Artes postes</h2>
 
-    <button onclick="publicar()">Publicar</button>
+    <button onclick="publicar()">Publicar</button>"
 
   </header>
   <dialog id="login">
@@ -52,80 +51,54 @@
 
   </select>
 
-  <section>
+  <section id="posts">
 
     <nav id="post1">
-      <h3>Usuário não indetificado:</h3>
+      
       <img src="https://i.imgur.com/VEW5iT5.jpeg" alt="" height="170px" onclick="arte()">
 
-      <nav name ="Descrição">
-     
-      </nav>
+      
 
     </nav>
 
 
     <nav id="post2">
-  <h3>FanART meio elfo</h3>
+  
    
    <img src="https://i.imgur.com/e54FqcW.jpeg" alt="" onclick="arte1()">
-      <div name="Descrição">
- <p>Meios elfos verde e roxo</p>
-      </div>
+      
     </nav>
     
     <nav id="post3">
-  <h3>Desen</h3>
+  
    
    <img src="https://i.imgur.com/Kta6LlU.jpeg" alt="" onclick="arte2()">
-      <nav name="Descrição">
- <p>Um desen</p>
-      </nav>
+
     </nav>
 
     <nav id="post4">
-  <h3></h3>
+  
    
    <img src="https://i.imgur.com/0MEzXLI.png" alt="" onclick="arte3()">
-      <div name="Descrição">
- <p></p>
-      </div>
+      
     </nav>
     
      <nav id="post5">
-  <h3></h3>
+
    
    <img src="https://i.imgur.com/UqeIKbw.jpeg" alt="" onclick="arte4()">
-      <div name="Descrição">
- <p></p>
-      </div>
+      
+    </nav>
+    
+    <nav id="post6">
+
+   
+   <img src="https://i.imgur.com/a5UIend.jpeg" alt="" onclick="arte5()">
+      
     </nav>
 
 
   </section>
-
-  <script>
-
-var data = new Date()
-var dia = data.getDate()
-var diaAnterior = localStorage.getItem("diaAnterior") || 0 
-
-if (dia != diaAnterior) {
-  
-  diaAnterior = dia
-  localStorage.setItem("diaAnterior",diaAnterior)
-  
-  window.location.href = "Abertura.html"
-  
-} else {
-  
-  console.error("A abertura já foi vista hoje")
-  
-}
-
-
-
- </script>
 
   <script id="cid0020000371909975668" data-cfasync="false" async src="//st.chatango.com/js/gz/emb.js" style="width: 100%;height: 100%;">{"handle":"artes-postes","arch":"js","styles":{"a":"cc0000","c":"000000","d":"000000","f":0,"i":0,"k":"cc0000","l":"cc0000","m":"cc0000","n":"FFFFFF","p":"10","q":"cc0000","fwtickm":1}}</script>
   <script src="main.js">main.js</script>
