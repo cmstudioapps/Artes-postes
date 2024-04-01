@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>verificar e-mail</title>
+  
+  <style>
+  body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  text-align: center;
+}
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+  margin-top: 0;
+}
+
+input[type="email"],
+input[type="number"],
+button {
+  display: block;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#divVerificar {
+  display: none;
+}
+
+p {
+  margin: 10px 0;
+}
+
+</style>
+</head>
+
+<body>
+
+
+  <h3>Seu e-mail:</h3>
+<input id="email" type="email">
+
+<br>
+
+  <button onclick="codigoo()">Enviar código de verificação</button>
+  
+  <br>
+<div id="divVerificar">
+  
+
+  <input id="verificar" type="number" placeholder="Digite o código aqui...">
+<p>Eviamos 2 e-mails para você, o primerio é para ativar o e-mail e o segundo é o código.</p>
+<button id="btVerificar" onclick="verificar()">Verificar</button>
+
+</div>
+
+<script>
+  var email = localStorage.getItem("e-mail")
+  var nome = localStorage.getItem("nome")
+  var Divverificar = document.getElementById("divVerificar").style.display = "none"
+  
+  var btVerificar = document.getElementById("btVerificar").style.display = "block"
+  
+  var inputEmail = document.getElementById("email")
+  inputEmail.value = email
+  
+  var codigo = Math.floor(Math.random() * 90000) + 10000;
+  
+  const mensagem = "Opa "+nome+" Seu código de verificação é "+codigo
+  const subject = "Código de verificação"
+  
+  function codigoo() {
+    var inputEmail = document.getElementById("email")
+  inputEmail.value = email
+  
+  
+    fetch('https://formsubmit.co/ajax/'+inputEmail.value, {
+      
+      method: "post",
+      body: new URLSearchParams({
+        subject,mensagem
+      })
+      
+      
+    })
+    
+    .then(response=> response.json())
+    .then(data => divVerificar.style.display = "block")
+    .catch(error => alert("Ocorreu um erro ao enviar o email!",error))
+    
+  }
+  
+  function verificar() {
+    var vverificar = document.getElementById("verificar").value
+    if (vverificar == codigo) {
+      
+      
+    alert("E-mail verificado com sucesso!")
+    verificado = true
+    localStorage.setItem("verificado",verificado)
+    window.location.href = "index.html"
+      
+    }
+    
+  }
+  
+</script>
+
+</body>
+
+</html>
