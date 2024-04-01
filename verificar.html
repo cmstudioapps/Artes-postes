@@ -69,7 +69,7 @@ p {
 
 <br>
 
-  <button onclick="codigoo()">Enviar código de verificação</button>
+  <button onclick="codigoo()" id="verifica">Enviar código de verificação</button>
   
   <br>
 <div id="divVerificar">
@@ -99,7 +99,8 @@ p {
   function codigoo() {
     var inputEmail = document.getElementById("email")
   inputEmail.value = email
-  
+  var verificar = document.getElementById("verifica")
+  verificar.innerHTML = "Aguarde..."
   
     fetch('https://formsubmit.co/ajax/'+inputEmail.value, {
       
@@ -113,7 +114,9 @@ p {
     
     .then(response=> response.json())
     .then(data => divVerificar.style.display = "block")
-    .catch(error => alert("Ocorreu um erro ao enviar o email!",error))
+    .then(data => verificar.innerHTML = "Enviado com sucesso!")
+    .catch(error => verificar.innerHTML = "Tente novamente")
+    .catch(error => verificar.style.backgroundColor = "red")
     
   }
   
