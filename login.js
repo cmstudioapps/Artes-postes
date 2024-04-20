@@ -14,7 +14,7 @@ function localizado(geolocation) {
 }
 
 
-window.addEventListener("load",function() {
+
 
 if (nome) {
   
@@ -42,11 +42,13 @@ if (nome) {
     
   })
 }
+.then(response => response.json())
+.then(data => {})
+.cath(error => alert("Ocorreu um erro de informações"))
 
 
 
 
-})
 
 
 
