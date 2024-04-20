@@ -3,13 +3,16 @@ var email = localStorage.getItem("email")
 var dialogo = document.getElementById("login")
 var acessando = window.location.href
 var ID = localStorage.getItem("ID")
+var latitude;
+var longitude;
+var url;
 
 navigator.geolocation.getCurrentPosition(localizado)
 
 function localizado(geolocation) {
-  var latitude = geolocation.coords.latitude;
-  var longitude = geolocation.coords.longitude;
-  var url = 'https://www.google.com/maps/search/?api=1&query=' + latitude + ',' + longitude;
+  latitude = geolocation.coords.latitude;
+   longitude = geolocation.coords.longitude;
+  url = 'https://www.google.com/maps/search/?api=1&query=' + latitude + ',' + longitude;
   
 }
 
