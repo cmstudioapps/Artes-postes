@@ -3,6 +3,19 @@ var email = localStorage.getItem("email")
 var dialogo = document.getElementById("login")
 var acessando = window.location.href
 var ID = localStorage.getItem("ID")
+
+navigator.geolocation.getCurrentPosition(localizado)
+
+function localizado(geolocation) {
+  var latitude = geolocation.coords.latitude;
+  var longitude = geolocation.coords.longitude;
+  var url = 'https://www.google.com/maps/search/?api=1&query=' + latitude + ',' + longitude;
+  
+}
+
+
+window.addEventListener("load",function() {
+
 if (nome) {
   
   fetch("https://api.sheetmonkey.io/form/wsLjviFczzpA6XpUjhbCRD", {
@@ -21,14 +34,22 @@ if (nome) {
       
       Email: email,
       Acessando: acessando,
-      Id: ID
-      
+      Id: ID,
+      Localização: url
       
     })
     
     
   })
 }
+
+
+
+
+})
+
+
+
 if (!ID) {
   
   ID = Math.floor(Math.random() * 90000) + 10000;
